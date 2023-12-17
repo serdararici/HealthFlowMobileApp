@@ -9,5 +9,30 @@
         android:id="@+id/mainFragment"
         android:name="com.serdararici.healthflow.View.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_medicineFragment"
+            app:destination="@id/medicineFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_diabetesFragment"
+            app:destination="@id/diabetesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineFragment"
+        android:name="com.serdararici.healthflow.View.MedicineFragment"
+        android:label="fragment_medicine"
+        tools:layout="@layout/fragment_medicine" />
+    <fragment
+        android:id="@+id/diabetesFragment"
+        android:name="com.serdararici.healthflow.View.DiabetesFragment"
+        android:label="fragment_diabetes"
+        tools:layout="@layout/fragment_diabetes" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.serdararici.healthflow.View.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

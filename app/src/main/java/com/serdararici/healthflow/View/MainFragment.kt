@@ -36,7 +36,9 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        navController= Navigation.findNavController(view)
+
+        //navController = Navigation.findNavController(view)
+
         val user = viewModel.currentUserViewModel()?.email.toString()
 
         binding.btnSignOut.setOnClickListener{
