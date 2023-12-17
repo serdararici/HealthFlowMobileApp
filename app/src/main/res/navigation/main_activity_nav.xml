@@ -19,12 +19,19 @@
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineFragment"
         android:name="com.serdararici.healthflow.View.MedicineFragment"
         android:label="fragment_medicine"
-        tools:layout="@layout/fragment_medicine" />
+        tools:layout="@layout/fragment_medicine" >
+        <action
+            android:id="@+id/action_medicineFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/diabetesFragment"
         android:name="com.serdararici.healthflow.View.DiabetesFragment"
@@ -34,5 +41,18 @@
         android:id="@+id/profileFragment"
         android:name="com.serdararici.healthflow.View.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.serdararici.healthflow.View.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
