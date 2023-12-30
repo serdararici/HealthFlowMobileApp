@@ -8,6 +8,37 @@
     <string name="signOut">Çıkış Yap</string>
     <string name="nav_open">Açık</string>
     <string name="nav_close">Kapalı</string>
+    <string name="set">Ayarla</string>
+    <string name="cancel">İptal</string>
+    <string name="close">Kapat</string>
+    <string name="save">Kaydet</string>
+    <string name="yes">EVET</string>
+    <string name="no">HAYIR</string>
+    <string name="date_format">GG/AA/YYYY</string>
+
+    //Medicine
+    <string name="medicineEdit">Düzenle</string>
+    <string name="medicineDelete">Sil</string>
+    //MedicineEdit
+    <string name="medicineAdd">İlaç Ekle</string>
+    <string name="medicineName">İlaç Adı: </string>
+    <string name="medicineDetails">İlaç Hakkında Bilgi: </string>
+    <string name="medicineNumbers">İlaç Adedi: </string>
+    <string name="medicineDate">İlaç Tarihi: </string>
+    <string name="medicineTime">İlaç Saati: </string>
+    <string name="choose_time">Saat Seçiniz</string>
+    <string name="choose_date">Tarih Seçiniz</string>
+    <string name="medicineNameInfo">İlaç ismini giriniz</string>
+    <string name="medicineDetailsInfo">İlaç detayı giriniz</string>
+    <string name="yarım">Yarım</string>
+    <string name="tam">Tam</string>
+    <string name="iki">İki</string>
+    <string name="üç">Üç</string>
+    <string name="dört">Dört</string>
+    <string name="mediceneAdded">İlaç başarıyla eklendi.</string>
+    <string name="mediceneAddFailed">İlaç ekleme işlemi başarısız!</string>
+    //MedcineUpdate
+    <string name="medicineUpdate">İlaç Düzenle</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

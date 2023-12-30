@@ -46,7 +46,7 @@ class SignUpFragment : Fragment() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 viewModel.signUpViewModel(email, password) { success, message ->
                     if(success){
-                        Toast.makeText(requireContext(), "Kayıt Başarılı $message", Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), "Kayıt Başarılı", Toast.LENGTH_LONG).show()
                         val intent = Intent(requireActivity(), MainActivity::class.java)
                         startActivity(intent)
                         requireActivity().finish()

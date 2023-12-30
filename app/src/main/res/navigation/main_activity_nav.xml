@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_medicineEditFragment"
+            app:destination="@id/medicineEditFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineFragment"
@@ -31,12 +34,22 @@
         <action
             android:id="@+id/action_medicineFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_medicineFragment_to_medicineEditFragment"
+            app:destination="@id/medicineEditFragment" />
+        <action
+            android:id="@+id/action_medicineFragment_to_medicineUpdateFragment"
+            app:destination="@id/medicineUpdateFragment" />
     </fragment>
     <fragment
         android:id="@+id/diabetesFragment"
         android:name="com.serdararici.healthflow.View.DiabetesFragment"
         android:label="fragment_diabetes"
-        tools:layout="@layout/fragment_diabetes" />
+        tools:layout="@layout/fragment_diabetes" >
+        <action
+            android:id="@+id/action_diabetesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.serdararici.healthflow.View.ProfileFragment"
@@ -54,5 +67,26 @@
         <action
             android:id="@+id/action_settingsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineEditFragment"
+        android:name="com.serdararici.healthflow.View.MedicineEditFragment"
+        android:label="fragment_medicine_edit"
+        tools:layout="@layout/fragment_medicine_edit" >
+        <action
+            android:id="@+id/action_medicineEditFragment_to_medicineFragment"
+            app:destination="@id/medicineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineUpdateFragment"
+        android:name="com.serdararici.healthflow.View.MedicineUpdateFragment"
+        android:label="fragment_medicine_update"
+        tools:layout="@layout/fragment_medicine_update" >
+        <action
+            android:id="@+id/action_medicineUpdateFragment_to_medicineFragment"
+            app:destination="@id/medicineFragment" />
+        <argument
+            android:name="medicine"
+            app:argType="com.serdararici.healthflow.Model.Medicine" />
     </fragment>
 </navigation>

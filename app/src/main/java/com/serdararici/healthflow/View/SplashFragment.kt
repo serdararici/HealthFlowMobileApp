@@ -37,13 +37,13 @@ class SplashFragment : Fragment() {
         binding.progressBar.max = 1000
         val currentProgress = 1000
         ObjectAnimator.ofInt(binding.progressBar, "progress", currentProgress)
-            .setDuration(3000)
+            .setDuration(2000)
             .start()
         navController= Navigation.findNavController(view)
         Handler(Looper.getMainLooper()).postDelayed({
             navController.navigate(R.id.action_splashFragment_to_signInFragment)
 
-        }, 3000) // 3000 milisaniye (3 saniye) sonra geçiş yapacak
+        }, 2000) // 2000 milisaniye (2 saniye) sonra geçiş yapacak
     }
 
 }

@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -43,7 +44,7 @@ android {
     }
 }
 
-val nav_version = "2.7.5"
+val nav_version = "2.7.6"
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
@@ -56,6 +57,7 @@ dependencies {
     //Navigation Component
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-compose:$nav_version")
     //////
     implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
@@ -65,4 +67,7 @@ dependencies {
     // Add the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-firestore:24.10.0")
+    implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
 }

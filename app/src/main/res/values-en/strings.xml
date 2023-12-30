@@ -8,6 +8,38 @@
     <string name="signOut">Sign Out</string>
     <string name="nav_open">Open Navigation Drawer</string>
     <string name="nav_close">Close Navigation Drawer</string>
+    <string name="close">Close</string>
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Kaydet</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="date_format">DD/MM/YYYY</string>
+
+    //Medicine
+    <string name="medicineEdit">Edit</string>
+    <string name="medicineDelete">Delete</string>
+    //MedicineEdit
+    <string name="medicineAdd">Add Medicine</string>
+    <string name="medicineName">Medicine Name: </string>
+    <string name="medicineDetails">Information About Medicine: </string>
+    <string name="medicineNumbers">Numbers of Medicine: </string>
+    <string name="medicineDate">Medicine Date: </string>
+    <string name="medicineTime">Medicine Time: </string>
+    <string name="choose_time">Choose Time</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="medicineNameInfo">Enter the medicine name</string>
+    <string name="medicineDetailsInfo">Enter the medicine details</string>
+    <string name="yarım">Half</string>
+    <string name="tam">Full</string>
+    <string name="iki">Two</string>
+    <string name="üç">Three</string>
+    <string name="dört">Four</string>
+    <string name="mediceneAdded">The medicine was added successfully.</string>
+    <string name="mediceneAddFailed">Failed: Medicine cannot be added!</string>
+    //MedicineUpdate
+    <string name="medicineUpdate">Update Medicine</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -19,7 +19,7 @@ import com.serdararici.healthflow.databinding.FragmentSignInBinding
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding?=null
     private val binding get() = _binding!!
-    private lateinit var navController: NavController
+    //private lateinit var navController: NavController
     private val viewModel: AuthViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
