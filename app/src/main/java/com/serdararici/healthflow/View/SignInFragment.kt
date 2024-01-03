@@ -57,7 +57,6 @@ class SignInFragment : Fragment() {
             val email=binding.etEmailAdresSignIn.text.toString()
             val password=binding.etPasswordSignIn.text.toString()
 
-
             if(checkAll()){
                 viewModel.signInViewModel(email,password){ success, message ->
                     if (success) {

@@ -100,6 +100,8 @@
     <string name="obesity1Range">30 ≤ VKI &lt; 34.9: Obezite(1.sınıf)</string>
     <string name="obesity2Range">35 ≤ VKI &lt; 39.9: Obezite(2.sınıf)</string>
     <string name="obesity3Range">VKI ≥ 40: Aşırı Obezite(3.sınıf)</string>
+    <string name="requiredHeightBmi">Boy alanı boş bırakılamaz!</string>
+    <string name="requiredWeightBmi">Kilo alanı boş bırakılamaz!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

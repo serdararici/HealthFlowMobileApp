@@ -100,6 +100,8 @@
     <string name="obesity1Range">30 ≤ BMI &lt; 34.9: Obezite(1.sınıf)</string>
     <string name="obesity2Range">35 ≤ BMI &lt; 39.9: Obezite(2.sınıf)</string>
     <string name="obesity3Range">BMI ≥ 40: Aşırı Obezite(3.sınıf)</string>
+    <string name="requiredHeightBmi">Height field cannot be left blank!</string>
+    <string name="requiredWeightBmi">Weight field cannot be left blank!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

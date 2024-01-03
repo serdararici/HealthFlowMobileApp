@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_mainFragment_to_medicineEditFragment"
             app:destination="@id/medicineEditFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bodyMassIndexFragment2"
+            app:destination="@id/bodyMassIndexFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineFragment"
@@ -103,5 +106,14 @@
         <argument
             android:name="profile"
             app:argType="com.serdararici.healthflow.Model.Profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/bodyMassIndexFragment"
+        android:name="com.serdararici.healthflow.View.BodyMassIndexFragment"
+        android:label="fragment_body_mass_index"
+        tools:layout="@layout/fragment_body_mass_index" >
+        <action
+            android:id="@+id/action_bodyMassIndexFragment2_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
