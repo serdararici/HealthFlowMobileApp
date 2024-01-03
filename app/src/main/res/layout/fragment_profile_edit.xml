@@ -1,96 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.SignUpFragment">
+    tools:context=".View.ProfileEditFragment">
+
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/tvEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="@string/signUpBigLetter"
-        android:textSize="48dp"
+        android:text="Profili Düzenle"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSignUpToSignIn"
+    <Button
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="55dp"
-        android:text="@string/alreadyHaveAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
-
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/signUp"
+        android:layout_marginTop="32dp"
+        android:text="@string/save"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPasswordAgain" />
+        app:layout_constraintTop_toBottomOf="@+id/editWeight" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputNameSurname"
+        android:id="@+id/editNameSurname"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:startIconDrawable="@drawable/baseline_person_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignUp">
+        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNameSurname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/putNameSurname" />
+            android:hint="@string/nameSurname" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputEmail"
+        android:id="@+id/editPhoneNo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconDrawable="@drawable/baseline_phone_android_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputNameSurname">
+        app:layout_constraintTop_toBottomOf="@+id/editNameSurname">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmailAdressSignUp"
+            android:id="@+id/etPhoneNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/putEmail"
-            android:inputType="textEmailAddress"
-            tools:layout_editor_absoluteX="-112dp"
-            tools:layout_editor_absoluteY="351dp" />
+            android:ems="10"
+            android:hint="@string/phoneNo"
+            android:inputType="phone"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="247dp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputBirthDate"
+        android:id="@+id/editBirthDate"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -98,56 +85,66 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEmail">
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneNo">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etBirthDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/birthDateSignUp" />
+            android:hint="@string/birthDate"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="307dp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPassword"
+        android:id="@+id/editHeight"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:startIconDrawable="@drawable/baseline_height_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputBirthDate">
+        app:layout_constraintTop_toBottomOf="@+id/editBirthDate">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPasswordSignUp"
+            android:id="@+id/etHeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/putPasword" />
+            android:hint="@string/height"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="382dp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPasswordAgain"
+        android:id="@+id/editWeight"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/baseline_check_circle_outline_24"
+        app:startIconDrawable="@drawable/baseline_accessibility_new_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPassword">
+        app:layout_constraintTop_toBottomOf="@+id/editHeight">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPasswordAgain"
+            android:id="@+id/etWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/putPasswordAgain" />
+            android:hint="@string/weight"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="451dp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

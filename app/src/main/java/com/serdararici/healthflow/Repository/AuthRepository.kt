@@ -1,5 +1,6 @@
 package com.serdararici.healthflow.Repository
 
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -34,6 +35,10 @@ class AuthRepository {
     fun signOutRepository(onComplete: (Boolean) -> Unit) {
         auth.signOut()
         onComplete(true)
+    }
+
+    fun forgetPassword(email:String){
+        auth.sendPasswordResetEmail(email)
     }
 
     fun getCurrentUserRepository(): FirebaseUser? {

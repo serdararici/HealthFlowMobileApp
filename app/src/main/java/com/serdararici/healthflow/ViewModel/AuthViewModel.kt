@@ -36,6 +36,10 @@ class AuthViewModel(): ViewModel() {
             onComplete(true)
         }
     }
+
+    fun forgetPasswordViewModel(email:String){
+        auth.forgetPassword(email)
+    }
     fun currentUserViewModel(): FirebaseUser?{
         return auth.getCurrentUserRepository()
     }

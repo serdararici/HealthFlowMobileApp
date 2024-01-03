@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toggle = ActionBarDrawerToggle(this, binding.drawer,binding.materialToolbar,R.string.nav_open, R.string.nav_close)
         binding.drawer.addDrawerListener(toggle)
         toggle.syncState()
+
 
         //binding.navigationView.setNavigationItemSelectedListener(this)
 

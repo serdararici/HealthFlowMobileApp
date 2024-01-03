@@ -16,7 +16,6 @@ class MedicineRepository {
     private val database = Firebase.firestore
     var medicineList = ArrayList<Medicine>()
     val userEmail = FirebaseAuth.getInstance().currentUser?.email as Any
-    var addedDate= Timestamp.now()
 
     /*var medicineListLive:MutableLiveData<ArrayList<Medicine>>
     init{
@@ -32,7 +31,7 @@ class MedicineRepository {
             "medicineNumbers" to medicineNumbers,
             "medicineDate" to medicineDate,
             "medicineTime" to medicineTime,
-            "addedDate" to addedDate)
+            "addedDate" to Timestamp.now())
 
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
 
@@ -93,7 +92,7 @@ class MedicineRepository {
             "medicineNumbers" to medicineNumbers,
             "medicineDate" to medicineDate,
             "medicineTime" to medicineTime,
-            "addedDate" to addedDate)
+            "addedDate" to Timestamp.now())
         database.collection("medicine").document(medicineId).update(medicineHashMap)
     }
 

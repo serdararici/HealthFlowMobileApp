@@ -12,10 +12,43 @@
     <string name="cancel">İptal</string>
     <string name="close">Kapat</string>
     <string name="save">Kaydet</string>
+    <string name="send">Gönder</string>
     <string name="yes">EVET</string>
     <string name="no">HAYIR</string>
+    <string name="result">Sonuç:</string>
     <string name="date_format">GG/AA/YYYY</string>
+    <string name="drawerText">Sağlıklı Günler Dileriz.</string>
 
+    //SignIn
+    <string name="signIn">Giriş Yap</string>
+    <string name="signInBigLetter">GİRİŞ YAP</string>
+    <string name="putPaswordSignIn">Şifrenizi giriniz</string>
+    <string name="forgetPassword">Şifremi Unuttum</string>
+    <string name="dontHaveAccount">Hesabın yok mu? Kayıt Ol</string>
+    <string name="welcome">Hoşgeldin: </string>
+    <string name="signInFailed">Giriş başarısız! - Email veya şifre yanlış. Tekrar deneyiniz.</string>
+    //SignUp
+    <string name="signUp">Kayıt Ol</string>
+    <string name="signUpBigLetter">KAYIT OL</string>
+    <string name="putNameSurname">İsim ve Soyisim giriniz</string>
+    <string name="birthDateSignUp">Doğum tarihinizi giriniz(GG/AA/YYYY) </string>
+    <string name="alreadyHaveAccount">Zaten bir hesabınız var mı? Giriş Yap</string>
+    <string name="putEmail">Email adresinizi giriniz</string>
+    <string name="putPasword">Şifrenizi giriniz (en az 6 karakter)</string>
+    <string name="putPasswordAgain">Şifrenizi tekrar giriniz</string>
+    <string name="requiredUserName">İsim alanı boş geçilemez!</string>
+    <string name="requiredBirtDate">Doğum tarihi alanı boş geçilemez!</string>
+    <string name="requiredPassword">Şifre alanı boş geçilemez!</string>
+    <string name="passwordLength">Şifre en az 6 karakterden oluşmalıdır!</string>
+    <string name="requiredPasswordAgain">Şifre tekrar alanı boş geçilemez!</string>
+    <string name="registrationSuccess">Kayıt Başarılı!</string>
+    <string name="registrationFailed">Kayıt Başarısız!</string>
+    <string name="passwordCheck">Uyarı: Girilen şifreler eşleşmiyor!</string>
+    //ForgetPassword
+    <string name="requiredEmail">Email alanı boş geçilemez!</string>
+    <string name="checkEmailFormat">Doğru bir email adresi giriniz!</string>
+    <string name="checkYourEmail">Yeni Şifre oluşturmak için email kutunu kontrol et</string>
+    <string name="infoForgetPasword">Girdiğiniz email adresinize gelecek olan mail ile şifrenizi değiştirebilirsiniz.</string>
     //Medicine
     <string name="medicineEdit">Düzenle</string>
     <string name="medicineDelete">Sil</string>
@@ -39,6 +72,35 @@
     <string name="mediceneAddFailed">İlaç ekleme işlemi başarısız!</string>
     //MedcineUpdate
     <string name="medicineUpdate">İlaç Düzenle</string>
+    //Profile
+    <string name="userName">Kullanıcı Adı</string>
+    <string name="email">Email</string>
+    <string name="age">Yaş</string>
+    <string name="yourAge">Yaş: </string>
+    //ProfileEdit
+    <string name="editProfile">Profili Düzenle</string>
+    <string name="nameSurname">Ad Soyad: </string>
+    <string name="phoneNo">Telefon Numaranız: </string>
+    <string name="birthDate">Doğum Tarihiniz(GG/AA/YYYY): </string>
+    <string name="height">Boyunuz(cm): </string>
+    <string name="weight">Kilonuz(kg): </string>
+    //BodyMassIndex
+    <string name="bodyMassIndex">Vücut Kitle İndeksi</string>
+    <string name="bodyMaskIndexCalculate">Vücut Kitle İndeksi Hesapla</string>
+    <string name="underWeight">Zayıf</string>
+    <string name="normalWeight">Normal</string>
+    <string name="overWeight">Fazla Kilolu</string>
+    <string name="obesity1">Obezite(1.sınıf)</string>
+    <string name="obesity2">Obezite(2.sınıf)</string>
+    <string name="obesity3">Aşırı Obezite(3.sınıf)</string>
+    <string name="calculate">Hesapla</string>
+    <string name="underWeightRange">VKI &lt; 18.5: Zayıf</string>
+    <string name="normalWeightRange">18.5 ≤ VKI &lt; 24.9: Normal</string>
+    <string name="overWeightRange">25≤ VKI &lt; 29.9: Fazla Kilolu</string>
+    <string name="obesity1Range">30 ≤ VKI &lt; 34.9: Obezite(1.sınıf)</string>
+    <string name="obesity2Range">35 ≤ VKI &lt; 39.9: Obezite(2.sınıf)</string>
+    <string name="obesity3Range">VKI ≥ 40: Aşırı Obezite(3.sınıf)</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

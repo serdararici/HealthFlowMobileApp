@@ -10,61 +10,25 @@
         android:id="@+id/tvSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="GİRİŞ YAP"
+        android:text="@string/signInBigLetter"
         android:textSize="48dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/healthflowlogo"
-        app:layout_constraintBottom_toTopOf="@+id/etEmailAdresSignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignIn" />
-
-    <EditText
-        android:id="@+id/etEmailAdresSignIn"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="56dp"
-        android:ems="10"
-        android:hint="Email adresinizi giriniz"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/etPasswordSignIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <EditText
-        android:id="@+id/etPasswordSignIn"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
-        android:ems="10"
-        android:hint="Şifrenizi giriniz"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailAdresSignIn" />
 
     <Button
         android:id="@+id/btnSignIn"
@@ -73,23 +37,20 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
-        android:text="Giriş Yap"
+        android:text="@string/signIn"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvSifremiUnuttum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputPasswordSignIn" />
 
     <TextView
-        android:id="@+id/tvSifremiUnuttum"
+        android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="62dp"
-        android:text="Şifremi Unuttum"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/forgetPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,13 +61,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="30dp"
-        android:text="Hesabın yok mu? Kayıt Ol"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/dontHaveAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmailSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailAdresSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/putEmail" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPasswordSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEmailSignIn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPasswordSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/putPaswordSignIn" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

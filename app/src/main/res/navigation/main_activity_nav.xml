@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_profileFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -88,5 +91,17 @@
         <argument
             android:name="medicine"
             app:argType="com.serdararici.healthflow.Model.Medicine" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.serdararici.healthflow.View.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_profileEditFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="profile"
+            app:argType="com.serdararici.healthflow.Model.Profile" />
     </fragment>
 </navigation>

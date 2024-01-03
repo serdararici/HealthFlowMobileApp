@@ -11,11 +11,44 @@
     <string name="close">Close</string>
     <string name="set">Set</string>
     <string name="cancel">Cancel</string>
-    <string name="save">Kaydet</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="result">Result:</string>
     <string name="date_format">DD/MM/YYYY</string>
+    <string name="drawerText">We wish you healthy days.</string>
 
+    //SignIn
+    <string name="signIn">Sign In</string>
+    <string name="signInBigLetter">SIGN IN</string>
+    <string name="putPaswordSignIn">Enter your password</string>
+    <string name="forgetPassword">Forgot Password</string>
+    <string name="dontHaveAccount">Do not have an account? Register</string>
+    <string name="welcome">Welcome: </string>
+    <string name="signInFailed">SignIn Failed! - Email or password is incorrect. Try again.</string>
+    //SignUp
+    <string name="signUp">Sign Up</string>
+    <string name="signUpBigLetter">SIGN UP</string>
+    <string name="putNameSurname">Enter your name and surname</string>
+    <string name="birthDateSignUp">Enter your birth date(GG/AA/YYYY) </string>
+    <string name="alreadyHaveAccount">Already have an account? Login</string>
+    <string name="putEmail">Enter your email address</string>
+    <string name="putPasword">Enter your password (at least 6 characters)</string>
+    <string name="putPasswordAgain">Password again</string>
+    <string name="requiredUserName">Name field cannot be blank!</string>
+    <string name="requiredBirtDate">Birthdate field cannot be blank!</string>
+    <string name="requiredPassword">Password field cannot be blank!</string>
+    <string name="passwordLength">Password must consist of at least 6 characters!</string>
+    <string name="requiredPasswordAgain">Password again field cannot be blank!</string>
+    <string name="registrationSuccess">Registration Successful!</string>
+    <string name="registrationFailed">Registration Failed!</string>
+    <string name="passwordCheck">Warning: The entered passwords do not match!</string>
+    //ForgetPassword
+    <string name="requiredEmail">Email is required!</string>
+    <string name="checkEmailFormat">Check email format!</string>
+    <string name="checkYourEmail">Check your email box to reset your password!</string>
+    <string name="infoForgetPasword">You can change your password with the e-mail sent to the e-mail address you entered.</string>
     //Medicine
     <string name="medicineEdit">Edit</string>
     <string name="medicineDelete">Delete</string>
@@ -39,6 +72,34 @@
     <string name="mediceneAddFailed">Failed: Medicine cannot be added!</string>
     //MedicineUpdate
     <string name="medicineUpdate">Update Medicine</string>
+    //Profile
+    <string name="userName">UserName</string>
+    <string name="email">Email</string>
+    <string name="age">Age</string>
+    <string name="yourAge">Age: </string>
+    //ProfileEdit
+    <string name="editProfile">Edit Profile</string>
+    <string name="nameSurname">Name and Surname: </string>
+    <string name="phoneNo">Phone Number: </string>
+    <string name="birthDate">Birth Date(DD/MM/YYYY): </string>
+    <string name="height">Your Height: </string>
+    <string name="weight">Your Weight: </string>
+    //BodyMassIndex
+    <string name="bodyMassIndex">Body Mass Index</string>
+    <string name="bodyMaskIndexCalculate">Calculate Body Mass Index</string>
+    <string name="underWeight">Underweight</string>
+    <string name="normalWeight">Normal</string>
+    <string name="overWeight">Overweight</string>
+    <string name="obesity1">Obesity(Class 1)</string>
+    <string name="obesity2">Obesity(Class 2)</string>
+    <string name="obesity3">Extreme Obesity(Class 3)</string>
+    <string name="calculate">Calculate</string>
+    <string name="underWeightRange">BMI &lt; 18.5: Zayıf</string>
+    <string name="normalWeightRange">18.5 ≤ BMI &lt; 24.9: Normal</string>
+    <string name="overWeightRange">25≤ BMI &lt; 29.9: Fazla Kilolu</string>
+    <string name="obesity1Range">30 ≤ BMI &lt; 34.9: Obezite(1.sınıf)</string>
+    <string name="obesity2Range">35 ≤ BMI &lt; 39.9: Obezite(2.sınıf)</string>
+    <string name="obesity3Range">BMI ≥ 40: Aşırı Obezite(3.sınıf)</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

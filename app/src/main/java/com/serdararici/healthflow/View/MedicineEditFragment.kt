@@ -97,24 +97,30 @@ class MedicineEditFragment : Fragment() {
         }
 
         //binding.editTextDate.setText(" ")
-        binding.editTextDate.setOnClickListener{
+        binding.editTextDate.setOnClickListener {
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
             val month = calendar.get(Calendar.MONTH)
             val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-            val datePicker = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{ datePicker, y, m, d ->
-                binding.editTextDate.setText(("$d/${m+1}/$y"))
-            },year,month,day)
+            val datePicker = DatePickerDialog(
+                requireContext(),
+                DatePickerDialog.OnDateSetListener { datePicker, y, m, d ->
+                    binding.editTextDate.setText(("$d/${m + 1}/$y"))
+                },
+                year,
+                month,
+                day
+            )
 
             datePicker.setTitle(R.string.choose_date)
-            val set=getString(R.string.set)
-            val cancel=getString(R.string.cancel)
+            val set = getString(R.string.set)
+            val cancel = getString(R.string.cancel)
             datePicker.setButton(DialogInterface.BUTTON_POSITIVE, set, datePicker)
             datePicker.setButton(DialogInterface.BUTTON_NEGATIVE, cancel, datePicker)
 
             datePicker.show()
-
+        }
 
             binding.btnMedicineSave.setOnClickListener{
                 var medicineName=binding.etMedicineName.text.toString()
@@ -132,7 +138,6 @@ class MedicineEditFragment : Fragment() {
                     }
                 }
             }
-        }
     }
 
     override fun onDestroyView() {
