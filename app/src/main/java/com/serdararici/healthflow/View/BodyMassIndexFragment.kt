@@ -72,7 +72,7 @@ class BodyMassIndexFragment : Fragment() {
                 }else{
                     resulText = " "
                 }
-                binding.tvResult.text = "Result: ${resulText}"
+                binding.tvResult.text = getString(R.string.result) +"${resulText}"
             }
         }
     }

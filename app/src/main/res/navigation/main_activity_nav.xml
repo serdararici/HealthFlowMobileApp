@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_mainFragment_to_bodyMassIndexFragment2"
             app:destination="@id/bodyMassIndexFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_signOutFragment2"
+            app:destination="@id/signOutFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineFragment"
@@ -52,6 +55,9 @@
         <action
             android:id="@+id/action_diabetesFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_diabetesFragment_to_diabetesEditFragment"
+            app:destination="@id/diabetesEditFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -73,6 +79,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineEditFragment"
@@ -116,4 +125,18 @@
             android:id="@+id/action_bodyMassIndexFragment2_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/diabetesEditFragment"
+        android:name="com.serdararici.healthflow.View.DiabetesEditFragment"
+        android:label="fragment_diabetes_edit"
+        tools:layout="@layout/fragment_diabetes_edit" >
+        <action
+            android:id="@+id/action_diabetesEditFragment_to_diabetesFragment"
+            app:destination="@id/diabetesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signOutFragment"
+        android:name="com.serdararici.healthflow.View.SignOutFragment"
+        android:label="fragment_sign_out"
+        tools:layout="@layout/fragment_sign_out" />
 </navigation>

@@ -8,6 +8,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.firestore
+import com.serdararici.healthflow.Model.Diabetes
 import com.serdararici.healthflow.Model.Medicine
 import com.serdararici.healthflow.adapter.MedicineAdapter
 import kotlinx.coroutines.withContext
@@ -17,10 +18,13 @@ class MedicineRepository {
     var medicineList = ArrayList<Medicine>()
     val userEmail = FirebaseAuth.getInstance().currentUser?.email as Any
 
-    /*var medicineListLive:MutableLiveData<ArrayList<Medicine>>
+    var medicineListLive:MutableLiveData<List<Medicine>>
     init{
         medicineListLive = MutableLiveData()
-    }*/
+    }
+    fun getMedicineLive():MutableLiveData<List<Medicine>>{
+        return medicineListLive
+    }
 
     fun addMedicineRepository(medicineName: String, medicineDetails: String, medicineNumbers: String, medicineDate: String, medicineTime: String,
                     onComplete: (Boolean) -> Unit){
@@ -46,12 +50,8 @@ class MedicineRepository {
             }
     }
 
-    /*fun getMedcines() : MutableLiveData<ArrayList<Medicine>> {
-        return medicineListLive
-    }*/
-
     fun medicineSearch(searchingWord:String){
-        database.collection("medicine").orderBy("addedDate",Query.Direction.DESCENDING)
+        database.collection("medicine").whereEqualTo("userEmail",userEmail).orderBy("addedDate",Query.Direction.DESCENDING)
             .addSnapshotListener { snapshot, exception ->
                 if(exception !=null) {
 
@@ -74,7 +74,7 @@ class MedicineRepository {
                                 if(medicines.medicineName!!.lowercase().contains(searchingWord.lowercase())){
                                     medicineList.add(medicines)
                                 }
-                                //medicineListLive.value = medicineList
+                                medicineListLive.value = medicineList
                             }
                         }
                     }
@@ -121,9 +121,8 @@ class MedicineRepository {
                             val medicineId = document.id
                             val medicines = Medicine(medicineId,medicineName,medicineDetails,medicineNumbers,medicineDate,medicineTime)
                             medicineList.add(medicines)
-                            //medicineListLive.value = medicineList
-
                         }
+                        medicineListLive.value = medicineList
                         onComplete(true, "")
                     }
                 }

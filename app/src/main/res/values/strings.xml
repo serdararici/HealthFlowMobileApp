@@ -44,6 +44,9 @@
     <string name="registrationSuccess">Kayıt Başarılı!</string>
     <string name="registrationFailed">Kayıt Başarısız!</string>
     <string name="passwordCheck">Uyarı: Girilen şifreler eşleşmiyor!</string>
+    //SignOut
+    <string name="signingOut">Çıkış yapılıyor...</string>
+    <string name="signedOut">hesabından çıkış yapıldı.</string>
     //ForgetPassword
     <string name="requiredEmail">Email alanı boş geçilemez!</string>
     <string name="checkEmailFormat">Doğru bir email adresi giriniz!</string>
@@ -72,6 +75,20 @@
     <string name="mediceneAddFailed">İlaç ekleme işlemi başarısız!</string>
     //MedcineUpdate
     <string name="medicineUpdate">İlaç Düzenle</string>
+    //Diabetes
+    <string name="diabetesTracking">Diyabet Takibi</string>
+    <string name="bloodSugarResultAdd">Kan Şekeri Sonucu Ekle</string>
+    <string name="bloodSugarValue">Kan Şekeri Değeri</string>
+    <string name="bloodSugarResult">Kan Şekeri Sonucu: </string>
+    <string name="dateDiabetes">Tarih Giriniz(gg/aa/yyy): </string>
+    <string name="timeDiabetes">Saat Giriniz(00:00): </string>
+    <string name="hungry">Aç</string>
+    <string name="full">Tok</string>
+    <string name="willDiabetesDelete">değerine sahip kayıt silinsin mi?</string>
+    <string name="diabetesResultRequired">Kan şekeri alanı boş bırakılamaz!</string>
+    <string name="diabetesDateRequired">Tarih alanı boş bırakılamaz!</string>
+    <string name="diabetesTimeRequired">Saat alanı boş bırakılamaz!</string>
+    <string name="diabetesHungryLevelRequired">Aç veya Tok seçiminden birini yapınız!</string>
     //Profile
     <string name="userName">Kullanıcı Adı</string>
     <string name="email">Email</string>

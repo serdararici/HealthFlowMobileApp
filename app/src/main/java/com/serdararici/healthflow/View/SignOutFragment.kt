@@ -2,6 +2,8 @@ package com.serdararici.healthflow.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,16 +12,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.serdararici.healthflow.R
 import com.serdararici.healthflow.ViewModel.AuthViewModel
-import com.serdararici.healthflow.databinding.FragmentMainBinding
-import com.serdararici.healthflow.databinding.FragmentSignInBinding
+import com.serdararici.healthflow.ViewModel.DiabetesEditViewModel
+import com.serdararici.healthflow.databinding.FragmentDiabetesEditBinding
+import com.serdararici.healthflow.databinding.FragmentSignOutBinding
 
-class MainFragment : Fragment() {
-    private var _binding: FragmentMainBinding?=null
+class SignOutFragment : Fragment() {
+    private var _binding: FragmentSignOutBinding?=null
     private val binding get() = _binding!!
-    //private lateinit var navController: NavController
+    private lateinit var navController: NavController
     private val viewModel: AuthViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,34 +33,31 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding= FragmentMainBinding.inflate(inflater,container,false)
+        _binding= FragmentSignOutBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val toolbar = (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
+        val toolbar = (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.signOut)
         //navController = Navigation.findNavController(view)
 
         val user = viewModel.currentUserViewModel()?.email.toString()
 
-        binding.btnSignOut.setOnClickListener{
-            viewModel.signOutViewModel(){ success ->
-              if (success) {
-                  val intent = Intent(requireContext(), AuthActivity::class.java)
-                  startActivity(intent)
-                  requireActivity().finish()
-                  Toast.makeText(requireContext(), "$user " + R.string.signedOut,Toast.LENGTH_LONG).show()
-              }
+        binding.progressBarSignOut.visibility = View.VISIBLE
+        viewModel.signOutViewModel(){ success ->
+            if (success) {
+
+                Handler(Looper.getMainLooper()).postDelayed({
+                    val intent = Intent(requireContext(), AuthActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
+                    Toast.makeText(requireContext(), "$user " + getString( R.string.signedOut), Toast.LENGTH_LONG).show()
+                }, 1000) // 1000 milisaniye (1 saniye) sonra geçiş yapacak
+
             }
         }
-    }
 
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
 }

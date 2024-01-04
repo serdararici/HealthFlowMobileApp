@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.serdararici.healthflow.R
 import com.serdararici.healthflow.ViewModel.AuthViewModel
 import com.serdararici.healthflow.databinding.FragmentProfileEditBinding
@@ -18,6 +19,7 @@ import com.serdararici.healthflow.databinding.FragmentSettingsBinding
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding?=null
     private val binding get() = _binding!!
+    private lateinit var navController: NavController
     private val viewModelAuth: AuthViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,17 +38,19 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toolbar = (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.settings)
+        navController = Navigation.findNavController(view)
 
         val userEmail = viewModelAuth.currentUserViewModel()?.email.toString()
         binding.cardViewSignOut.setOnClickListener{
-            viewModelAuth.signOutViewModel(){ success ->
+            navController.navigate(R.id.action_settingsFragment_to_signOutFragment)
+            /*viewModelAuth.signOutViewModel(){ success ->
                 if (success) {
                     val intent = Intent(requireContext(), AuthActivity::class.java)
                     startActivity(intent)
                     requireActivity().finish()
-                    Toast.makeText(requireContext(), "$userEmail hesabından çıkış yapıldı.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "$userEmail " + R.string.signedOut, Toast.LENGTH_LONG).show()
                 }
-            }
+            }*/
         }
     }
 }

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <item
-        android:title="@string/diabetes"
+        android:title="@string/diabetesTracking"
         android:id="@+id/diabetesFragment"
         android:icon="@drawable/baseline_playlist_add_circle_24"
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"/>
     <item
         android:title="@string/signOut"
-        android:id="@+id/signOut"
+        android:id="@+id/signOutFragment"
         android:icon="@drawable/baseline_logout_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

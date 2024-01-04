@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.diabetesFragment -> replaceFragment(DiabetesFragment())
             R.id.profileFragment -> replaceFragment(ProfileFragment())
             R.id.settingsFragment -> replaceFragment(SettingsFragment())
-            R.id.signOut -> signOut()
+            R.id.signOutFragment -> signOut()
         }
         binding.drawer.closeDrawer(GravityCompat.START)
         return true

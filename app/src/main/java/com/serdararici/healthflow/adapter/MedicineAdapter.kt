@@ -19,7 +19,7 @@ import com.serdararici.healthflow.databinding.MedicineRecyclerRowBinding
 import kotlinx.coroutines.withContext
 
 class MedicineAdapter(val context: Context,
-                      val medicineList : ArrayList<Medicine>,
+                      val medicineList : List<Medicine>,
                       var viewModel: MedicineViewModel)
     : RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> () {
     inner class MedicineViewHolder(val binding: MedicineRecyclerRowBinding) : RecyclerView.ViewHolder(binding.root){
@@ -76,10 +76,10 @@ class MedicineAdapter(val context: Context,
             }
         }
 
-        fun medicineListUpdate(newMedicineList: List<Medicine>) {
+        /*fun medicineListUpdate(newMedicineList: List<Medicine>) {
             medicineList.clear()
             medicineList.addAll(newMedicineList)
             notifyDataSetChanged()
-        }
+        }*/
     }
 }

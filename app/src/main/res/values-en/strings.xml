@@ -44,6 +44,9 @@
     <string name="registrationSuccess">Registration Successful!</string>
     <string name="registrationFailed">Registration Failed!</string>
     <string name="passwordCheck">Warning: The entered passwords do not match!</string>
+    //SignOut
+    <string name="signingOut">Signing out...</string>
+    <string name="signedOut">account has been sign out.</string>
     //ForgetPassword
     <string name="requiredEmail">Email is required!</string>
     <string name="checkEmailFormat">Check email format!</string>
@@ -72,6 +75,20 @@
     <string name="mediceneAddFailed">Failed: Medicine cannot be added!</string>
     //MedicineUpdate
     <string name="medicineUpdate">Update Medicine</string>
+    //Diabetes
+    <string name="diabetesTracking">Diabetes Tracking</string>
+    <string name="bloodSugarResultAdd">Add Blood Sugar Result</string>
+    <string name="bloodSugarValue">Blood Sugar Value</string>
+    <string name="bloodSugarResult">Blood Sugar Result: </string>
+    <string name="dateDiabetes">Enter Date(dd/mm/yyyy): </string>
+    <string name="timeDiabetes">Enter Time(00:00): </string>
+    <string name="hungry">Hungry</string>
+    <string name="full">Full</string>
+    <string name="willDiabetesDelete">value record delete?</string>
+    <string name="diabetesResultRequired">The blood sugar field cannot be left blank!</string>
+    <string name="diabetesDateRequired">Date field cannot be left blank!</string>
+    <string name="diabetesTimeRequired">Time field cannot be left blank!</string>
+    <string name="diabetesHungryLevelRequired">Choose between hungry or full!</string>
     //Profile
     <string name="userName">UserName</string>
     <string name="email">Email</string>
@@ -94,12 +111,12 @@
     <string name="obesity2">Obesity(Class 2)</string>
     <string name="obesity3">Extreme Obesity(Class 3)</string>
     <string name="calculate">Calculate</string>
-    <string name="underWeightRange">BMI &lt; 18.5: Zayıf</string>
+    <string name="underWeightRange">BMI &lt; 18.5: Underweight</string>
     <string name="normalWeightRange">18.5 ≤ BMI &lt; 24.9: Normal</string>
-    <string name="overWeightRange">25≤ BMI &lt; 29.9: Fazla Kilolu</string>
-    <string name="obesity1Range">30 ≤ BMI &lt; 34.9: Obezite(1.sınıf)</string>
-    <string name="obesity2Range">35 ≤ BMI &lt; 39.9: Obezite(2.sınıf)</string>
-    <string name="obesity3Range">BMI ≥ 40: Aşırı Obezite(3.sınıf)</string>
+    <string name="overWeightRange">25≤ BMI &lt; 29.9: Overweight</string>
+    <string name="obesity1Range">30 ≤ BMI &lt; 34.9: Obesity(Class 1)</string>
+    <string name="obesity2Range">35 ≤ BMI &lt; 39.9: Obesity(Class 2)</string>
+    <string name="obesity3Range">BMI ≥ 40: Extreme Obesity(Class 3)</string>
     <string name="requiredHeightBmi">Height field cannot be left blank!</string>
     <string name="requiredWeightBmi">Weight field cannot be left blank!</string>
 
